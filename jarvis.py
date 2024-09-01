@@ -29,32 +29,28 @@ def speech(x):
 
 if __name__ == '__main__':
 
-    if sptext().lower() == "hey shreya":
-           while True:   
-              data1=sptext().lower()
-              if "your name" in data1:
-                  name= "my name is peter"
-                  speech(name)
-              elif "old are you" in data1:
-                   age= "I have no age "
-                   speech(age)
-              elif "time" in data1:
-                    time=   datetime.datetime.now().strftime("%I%M%p")
-                    speech(time) 
-              elif "youtube" in data1:
-                     webbrowser.open("https://www.youtube.com/")
-              elif "linkedin" in data1:
-                     webbrowser.open("https://www.linkedin.com/")   
-              elif "joke" in data1:
-                    joke_1=pyjokes.get_jokes(language="en",category="neutral")
-                    speech(joke_1)
-   
-              elif "exit" in data1:
-                    speech("thank you have a nice day")
-                    break
     
-                
-else:
-     print("thanks")
+    while True:   
+        data1=sptext().lower()
+        if "your name" in data1:
+                name= "my name is peter"
+                speech(name)
+        elif "old are you" in data1:
+                age= "I have no age "
+                speech(age)
+        elif "time" in data1:
+                time=   datetime.datetime.now().strftime("%I%M%p")
+                speech(time) 
+        elif "youtube" in data1:
+                webbrowser.open("https://www.youtube.com/")
+        elif "linkedin" in data1:
+                webbrowser.open("https://www.linkedin.com/")   
+        elif "joke" in data1:
+                joke_1=pyjokes.get_jokes(language="en",category="neutral")
+                speech(joke_1)
+        elif "exit" in data1:
+                speech("thank you have a nice day")
+                break
+    
 
 
